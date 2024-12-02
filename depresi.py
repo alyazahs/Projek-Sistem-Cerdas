@@ -23,9 +23,9 @@ def home_page():
     st.image(image_file, use_container_width=True)
     st.write("### Selamat Datang di Website Analisis Tingkat Depresi Pasca Melahirkan")
     st.write("""
-    Aplikasi ini dirancang untuk membantu Anda:
+    Aplikasi ini untuk membantu Anda Mengalisis Tingkat Depresi Pasca Melahirkan yang isinya berisi:
     - Melihat data set.
-    - Menampilkan ringkasan statistik deskriptif.
+    - Menampilkan exploratory data analysis.
     - Memasukkan data manual untuk memprediksi tingkat depresi pasca persalinan.
     
     Gunakan menu di sidebar untuk navigasi.
