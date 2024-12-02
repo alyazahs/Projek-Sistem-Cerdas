@@ -21,7 +21,7 @@ image_file = 'ilustration.jpg'
 # Fungsi untuk halaman "Home"
 def home_page():
     st.image(image_file, use_container_width=True)
-    st.write("### Selamat Datang di Website Analisis Tingkat Depresi Pasca Melahirkan")
+    st.write("### Selamat Datang di MoodBunBUn")
     st.write("""
     Aplikasi ini untuk membantu Anda Mengalisis Tingkat Depresi Pasca Melahirkan yang isinya berisi:
     - Melihat data set.
