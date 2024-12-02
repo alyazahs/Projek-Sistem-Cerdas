@@ -15,7 +15,6 @@ st.title("Prediksi dan Analisis Tingkat Depresi Pasca Melahirkan")
 # Lokasi file CSV
 file_path = "depresi pasca melahirkan.csv"
 model_file = 'model_depresi_pasca_melahirkan.sav'
-result_file = 'hasil_prediksi.sav'
 image_file = 'ilustration.jpg'
 
 # Fungsi untuk halaman "Home"
