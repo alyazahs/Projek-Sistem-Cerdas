@@ -25,7 +25,7 @@ def home_page():
     Aplikasi ini untuk membantu Anda Mengalisis Tingkat Depresi Pasca Melahirkan yang isinya berisi:
     - Melihat data set.
     - Menampilkan exploratory data analysis.
-    - Memasukkan data manual untuk memprediksi tingkat depresi pasca persalinan.
+    - Memasukkan data manual untuk memprediksi tingkat depresi pasca persalinan menggunakan metode logistic regression.
     
     Gunakan menu di sidebar untuk navigasi.
     """)
