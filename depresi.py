@@ -62,9 +62,14 @@ def home_page():
 
 # Fungsi untuk halaman "Tinjauan Data"
 def data_overview(data):
-    st.write("### Tinjauan Data")
+    st.write("### Dataset")
     st.dataframe(data)
-    st.write("Dataset ini cocok digunakan karena berisi data yang relevan dengan gejala depresi pasca melahirkan, seperti perasaan sedih, cemas, kesulitan tidur, dan hubungan dengan bayi atau pasangan. Dengan memiliki 1503 data, termasuk jumlah datanya cukup besar untuk analisis dan pengembangan model prediksi. Selain itu informasinya juga beragam, mencakup aspek emosional, sosial, dan kesehatan, yang membantu memahami kondisi secara menyeluruh. Meski ada beberapa nilai data yang kosong, namun data tetap bisa diolah dengan teknik tertentu. Dataset ini sangat sesuai untuk mendeteksi risiko depresi lebih awal dan mendukung tujuan penelitian.")
+    st.write("""
+    Dataset ini  berisi data relevan tentang gejala depresi pasca melahirkan seperti perasaan sedih, cemas, kesulitan tidur, dan hubungan dengan bayi atau pasangan. 
+    Dengan 1503 catatan dari rumah sakit medis yang diperoleh melalui kuesioner Google Form, dataset ini cukup besar untuk analisis dan pengembangan model prediksi. 
+    Informasi yang beragam mencakup aspek emosional, sosial, dan kesehatan, sehingga membantu memahami kondisi secara menyeluruh. 
+    Meskipun ada beberapa nilai data yang kosong, data tetap dapat diolah dengan teknik tertentu. 
+    Dataset ini sangat sesuai untuk mendeteksi risiko depresi lebih awal dan mendukung tujuan penelitian.""")
 
 # Fungsi untuk halaman "Input Data"
 def input_data_page(columns_of_interest, model=None, feature_columns=None):
@@ -106,6 +111,8 @@ def input_data_page(columns_of_interest, model=None, feature_columns=None):
             - Prioritaskan waktu istirahat dan hindari beban mental atau fisik yang berat.
             - Jika berhubungan dengan stres, pertimbangkan untuk mengikuti terapi atau kegiatan relaksasi.
             """)
+            st.write("*Ingatlah, Anda tidak sendiri dalam perjalanan ini. Mengambil langkah untuk mencari bantuan adalah tindakan yang sangat kuat. Anda berhak mendapatkan dukungan yang Anda butuhkan dan menjadi lebih baik🫶🏼.*")
+
         elif prediksi == "Sedang":
             st.write("**Keterangan:** Tingkatan Depresi Pasca Persalinan berada di level SEDANG. Ini menunjukkan kondisi yang masih dalam batas normal, tetapi perlu pengawasan lebih lanjut.")
             st.write("**Saran:**")
@@ -114,6 +121,8 @@ def input_data_page(columns_of_interest, model=None, feature_columns=None):
             - Monitor kondisi secara berkala dan hindari situasi yang memperburuk gejala.
             - Lakukan aktivitas ringan yang menyenangkan untuk menjaga keseimbangan emosi.
             """)
+            st.write("*Anda sudah melakukan yang terbaik. Jangan ragu untuk mencari dukungan ketika Anda membutuhkannya. Setiap langkah kecil menuju kesejahteraan adalah kemenangan besar💕.*")
+
         elif prediksi == "Rendah":
             st.write("**Keterangan:** Tingkatan Depresi Pasca Persalinan berada di level RENDAH. Kondisi ini menunjukkan bahwa tidak ada masalah serius atau gejala minimal.")
             st.write("**Saran:**")
@@ -122,6 +131,20 @@ def input_data_page(columns_of_interest, model=None, feature_columns=None):
             - Pastikan untuk terus menjaga kebiasaan baik seperti olahraga ringan dan pola makan teratur.
             - Jangan lupa untuk tetap menjalani pemeriksaan rutin sebagai pencegahan.
             """)
+            st.write("*Anda berada di jalur yang benar. Terus pertahankan kebiasaan baik Anda dan nikmati setiap momen perjalanan keibuan ini. Anda melakukan pekerjaan yang luar biasa⭐.*")
+
+#Fungsi halaman model
+def model():
+    st.write("""
+    ### Logistic Regression
+
+    **Logistic Regression** adalah algoritma mesin Learning yang digunakan untuk memecahkan masalah klasifikasi. Model ini dirancang untuk memprediksi kemungkinan suatu data termasuk ke dalam kategori tertentu, seperti kelas "Ya" atau "Tidak". Logistic Regression bekerja dengan menghitung probabilitas menggunakan fungsi sigmoid, yang memetakan nilai input menjadi rentang probabilitas antara 0 hingga 1. Probabilitas tersebut kemudian digunakan untuk menentukan kelas akhir berdasarkan ambang batas tertentu, misalnya 0.5.
+    
+    Algoritma ini memiliki banyak keunggulan. Logistic Regression sederhana dan mudah dimengerti, menjadikannya pilihan yang baik untuk masalah klasifikasi yang tidak terlalu kompleks. Model ini juga efisien untuk dataset berukuran kecil hingga sedang. Salah satu kekuatannya adalah kemampuannya memberikan interpretasi, karena koefisien yang dihasilkan model dapat menunjukkan pengaruh masing-masing fitur terhadap prediksi. Selain itu, Logistic Regression mendukung regularisasi untuk mengurangi risiko overfitting, terutama pada dataset dengan banyak fitur.
+    
+    ### Alasan
+    
+    **Alasan memilih Logistic Regression** terletak pada kesederhanaan, kecepatan implementasi, dan kemampuannya menghasilkan hasil yang mudah dipahami. Model ini cocok untuk berbagai jenis masalah klasifikasi, seperti memprediksi apakah seseorang mengalami depresi pasca melahirkan, dengan output berupa tiga kategori. Logistic Regression juga memberikan probabilitas untuk setiap kelas, yang sangat berguna dalam pengambilan keputusan berbasis ambang batas. Meskipun sederhana, algoritma ini cukup kuat untuk menangani noise dalam data asalkan hubungan antar variabel cenderung linier. Oleh karena itu, Logistic Regression adalah pilihan yang tepat untuk masalah klasifikasi yang relatif sederhana dan mudah dimengerti.""")
 
 # Fungsi untuk halaman "Exploratory Data Analysis"
 def exploratory_data_analysis():
@@ -227,7 +250,7 @@ def exploratory_data_analysis():
         st.write("""
         **Confusion Matrix ->** Merupakan matriks kebingungan yang menunjukkan jumlah prediksi yang benar dan salah yang dibuat oleh model. 
         Dalam table tersebut terdiri dari empat nilai, yaitu:
-        - **170:** Menunjukkan jumlah data yang sebenarnya negated dan diprediksi negative oleh model.
+        - **170:** Menunjukkan jumlah data yang sebenarnya negatif dan diprediksi negatif oleh model.
         - **24:** Menunjukkan jumlah data yang sebenarnya negatif, namun diprediksi positif oleh model.
         - **25:** Menunjukkan jumlah data yang sebenaarnya positif, namun diprediksi negatif oleh model.
         - **82:** Menunjukkan  jumlah data yang sebenarnya positif dan diprediksi positif oleh model.
@@ -292,15 +315,18 @@ columns_of_interest = {
 try:
     # Membaca data dari file
     data = pd.read_csv(file_path)
-    menu = st.tabs(["🏡Home", "📊Dataset", "📈Exploratory Data Analysis", "🤱🏻Input Data"])
+    menu = st.tabs(["🏡Home", "📊Dataset", "📑Model", "📈Exploratory Data Analysis", "🤱🏻Input Data"])
     with menu[0]:
         home_page()
     with menu[1]:
         data_overview(data)
     with menu[2]:
-        exploratory_data_analysis()
+        model()
     with menu[3]:
+        exploratory_data_analysis()
+    with menu[4]:
         input_data_page(columns_of_interest)
+
 except FileNotFoundError:
     st.error(f"File tidak ditemukan di lokasi: {file_path}. Pastikan jalur file benar.")
 except Exception as e:
