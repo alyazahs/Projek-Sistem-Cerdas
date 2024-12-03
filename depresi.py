@@ -157,7 +157,7 @@ def exploratory_data_analysis():
         # Analisis Nilai yang Hilang
         st.subheader("Analisis Nilai yang Hilang")
         st.write(df.isnull().sum())
-        st.write("""Analisa Data Hilang Analisis pada tabel tersebut menunjukkan bahwa sebagian besar dari kategori data tidak memiliki nilai yang hilang, 
+        st.write("""Analisis pada tabel tersebut menunjukkan bahwa sebagian besar dari kategori data tidak memiliki nilai yang hilang, 
         kecuali untuk kategori **Irretable towards baby & partner memiliki nilai yang hilang yaitu 6, Problems concentrating or making decision memiliki nilai yang hilang yaitu 12, dan Feeling of guilt memiliki nilai yang hilang yaitu 9**. 
         Hal ini menunjukkan bahwa data untuk tiga kategori tersebut mungkin kurang lengkap atau ada masalah dalam pengumpulan data""")
 
@@ -201,7 +201,7 @@ def exploratory_data_analysis():
         Grafik ini memiliki **tiga kategori** yaitu **no, yes,** dan **sometimes**. 
         **Sumbu x** menunjukkan ketiga kategori tersebut, sedangkan **sumbu y** menunjukkan jumlah responden. 
         Grafik ini menunjukkan sebagian banyak responden merasa sedih atau menangis, namun juga sebagian banyak dari responden tidak merasa sedih atau menangis. 
-        Kategori sometimes' memiliki jumlah responden paling sedikit dibandingkan dua kategori lainnya.
+        Kategori **sometimes** memiliki jumlah responden paling sedikit dibandingkan dua kategori lainnya.
         """)
 
         # Visualisasi 3: Word Cloud Gejala
@@ -262,15 +262,15 @@ def exploratory_data_analysis():
         **Classification Report ->** Merupakan laporan klasifikasi yang memberikan matriks evaluasi lainnya seperti 
         precision, recall, f1-score, dan support untuk dua kelas yaitu False dan True.
         - **False**
-            - Precision: 0.87 atau 87%, dimana dari keseluruhan prediksi negatif, 87% benar-benar negatif.
-            - Recall: 0.88 atau 88%, dimana dari semua data yang sebenarnya negatif, 88% berhasil diprediksi benar.
-            - F1-score: 0.87 atau 87%, merupakan rata-rata dari precision dan recall.
-            - Support: 194, merupakan jumlah data yang sebenarnya negatif.
+            - **Precision:** 0.87 atau 87%, dimana dari keseluruhan prediksi negatif, 87% benar-benar negatif.
+            - **Recall:** 0.88 atau 88%, dimana dari semua data yang sebenarnya negatif, 88% berhasil diprediksi benar.
+            - **F1-score:** 0.87 atau 87%, merupakan rata-rata dari precision dan recall.
+            - **Support:** 194, merupakan jumlah data yang sebenarnya negatif.
         - **True** 
-            - Precision: 0.77 atau 77%, dimana dari keseluruhan prediksi positif, 77% benar-benar positif.
-            - Recall: 0.77 atau 77%, dimana dari semua data yang sebenarnya positif, 77% berhasil diprediksi benar.
-            - F1-score: 0.77 atau 77%, merupakan rata-rata dari precision dan recall.
-            - Support: 107, merupakan jumlah data yang sebenarnya positif.
+            - **Precision:** 0.77 atau 77%, dimana dari keseluruhan prediksi positif, 77% benar-benar positif.
+            - **Recall:** 0.77 atau 77%, dimana dari semua data yang sebenarnya positif, 77% berhasil diprediksi benar.
+            - **F1-score:** 0.77 atau 77%, merupakan rata-rata dari precision dan recall.
+            - **Support:** 107, merupakan jumlah data yang sebenarnya positif.
         
         **Macro avg:** Rata-rata dari precision, recall, dan f1-score tanpa mempertimbangkan jumlah data pada setiap kelas.
         
